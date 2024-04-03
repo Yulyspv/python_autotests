@@ -8,9 +8,10 @@ def test_status_code_200():
     assert response.status_code == 200
 
 
-def test_id774():   
-    
-    response = requests.get('https://api.pokemonbattle-stage.me/v2/trainers',  params={'trainer_id':'774'})
-    response = response.json()
-    assert response['trainer_name'] == 'Юлия'
-
+def test_id916():  
+  
+  response = requests.get ('https://pokemonbattle-stage.me/v2/trainers', params= {'trainer_id': '916'})
+  response = response.json()
+  
+  assert response['data']['trainer_name'] == 'Юлия'
+ 
